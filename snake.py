@@ -4,7 +4,7 @@ import pygame
 
 class Snake:
     
-    def __init__(self, symbol, start_pos):
+    def __init__(self, start_pos):
         self.__score = 0
         self.__snake = []
         self.__snake.append(start_pos)
@@ -66,7 +66,7 @@ class Snake:
                
 if __name__ == '__main__':
     pygame.init()   
-    s = Snake('O', [5, 5])
+    s = Snake([5, 5])
     
     screen = pygame.display.set_mode((800, 400))
 
