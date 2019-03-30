@@ -14,7 +14,7 @@ class Food:
     def is_colliding(self, pos):
         if self.__pos[0] == pos[0] and self.__pos[1] == pos[1]:
             return True
-        else
+        else:
             return False
 
     def spawn(self):
