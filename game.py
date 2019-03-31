@@ -37,6 +37,7 @@ class Game:
         self.__snake = Snake([self.__board_size//2, self.__board_size//2], (self.__WIDTH, self.__HEIGHT))
 
         self.__screen = pygame.display.set_mode((self.__WIDTH, self.__HEIGHT))
+        
         self.__game_over = False
 
     def __logic(self):
@@ -59,6 +60,8 @@ class Game:
                     self.__snake_vel = [0, -1]
                 elif event.key == pygame.K_DOWN:
                     self.__snake_vel = [0, 1]
+                elif event.key == pygame.K_p:
+                    self.__pause_game()
 
         self.__game_over = self.__snake.move(self.__snake_vel)
 
@@ -78,6 +81,18 @@ class Game:
 
         label = self.__score_font.render(text, 1, COLOR)
         self.__screen.blit(label, (5, self.__HEIGHT-40))
+
+    def __pause_game(self):   
+        pause = True
+
+        while pause:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    sys.exit()
+
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_p:
+                        pause = False
 
 if __name__ == '__main__':
     g = Game(800)
