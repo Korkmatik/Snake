@@ -12,6 +12,9 @@ Right Arrow - Move right<br>
 Up Arrow - Move up<br>
 Down Arrow - Move Down<br>
 
+## Game functionality
+p - Pause/Unpause
+
 # What I've learned
 - Creating a game with "PyGame"
 - Working with vi
