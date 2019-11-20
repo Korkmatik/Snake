@@ -1,5 +1,5 @@
 # Snake
-This is a simple Snake game. It was created with the Python and the "pygame" module
+This is a simple Snake game. It was created with Python and the "pygame" module
 
 # How it works
 1. Start the "game.py" file
